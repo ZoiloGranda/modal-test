@@ -1,5 +1,16 @@
 # modal-test
 
+cualquier framerowk js
+ningun framerowk css
+json API
+entregar en github
+hosteado tambien
+enviar correo a manuel cuando termine
+no inline style
+buscar font igual
+responsive
+usar flexbox
+
 ## Project setup
 ```
 npm install
