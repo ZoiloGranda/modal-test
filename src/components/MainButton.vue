@@ -24,7 +24,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 button {
-  box-shadow: 4px 4px 7px 0px #b0b0b0;
+  box-shadow: 4px 4px 7px 0px #e2e2e2;
   background: linear-gradient(to bottom, #0769fd 5%, #0769fd 100%);
   background-color: #0769fd;
   border-radius: 4px;

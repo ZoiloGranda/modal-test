@@ -1,11 +1,11 @@
 <template>
-  <div class="">
+  <div class="steps-container">
     <div class="flow-container flex">
       <div class="step-1">
         <img src="../assets/check.svg" class="icon" alt="checkmark" />
       </div>
       <div class="step-5">
-        <div class="line"></div>
+        <div class="line green"></div>
       </div>
       <div class="step-1">
         <img src="../assets/check.svg" class="icon" alt="checkmark" />
@@ -14,25 +14,25 @@
         <div class="line"></div>
       </div>
       <div class="step-1">
-        <span class="dot"><p>3</p></span>
+        <span class="dot"><p class="white-text bold-text">3</p></span>
       </div>
       <div class="step-5">
         <div class="line"></div>
       </div>
       <div class="step-1">
-        <span class="dot"><p>4</p></span>
+        <span class="dot"><p class="white-text bold-text">4</p></span>
       </div>
       <div class="step-5">
         <div class="line"></div>
       </div>
       <div class="step-1">
-        <span class="dot"><p>5</p></span>
+        <span class="dot"><p class="white-text bold-text">5</p></span>
       </div>
       <div class="step-5">
         <div class="line"></div>
       </div>
       <div class="step-1">
-        <span class="dot"><p>6</p></span>
+        <span class="dot"><p class="white-text bold-text">6</p></span>
       </div>
     </div>
     <div class="description-container flex">
@@ -84,22 +84,29 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.steps-container{
+ width: 90%;
+ margin: 0 auto;
+}
 .flow-container {
   height: 30px;
   .step-1 {
     flex-grow: 1;
     height: 30px;
-    // width: 10vw;
     .icon {
       height: 20px;
       width: 20px;
     }
     .dot {
-      height: 20px;
-      width: 20px;
+      height: 25px;
+      width: 25px;
       background-color: #bbb;
       border-radius: 50%;
       display: inline-block;
+      p{
+       margin: 0;
+       line-height: 1.6rem;
+      }
     }
   }
   .step-5{
@@ -110,6 +117,9 @@ export default {
     border: 1px solid #c4c4c4;
     margin: 3px;
     display: inline-block;
+    &.green{
+     border: 1px solid #00c221;
+    }
    }
   }
 }

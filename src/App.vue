@@ -44,6 +44,10 @@ export default {
   flex-grow: 4;
 }
 
+.fg-14 {
+  flex-grow: 14;
+}
+
 .center-text{
  margin: auto;
 }

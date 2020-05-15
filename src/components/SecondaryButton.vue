@@ -23,11 +23,11 @@ export default {
 
 <style scoped lang="scss">
 button {
-  box-shadow: 4px 4px 7px 0px #b0b0b0;
+  box-shadow: 4px 4px 7px 0px #e2e2e2;
   background: linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid #057fd0;
+  border: 1px solid #e0e0e0;
   display: inline-block;
   cursor: pointer;
   color: #0769fd;
