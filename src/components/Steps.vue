@@ -1,30 +1,35 @@
 <template>
-  <div class="container">
-   <div class="step">
-   <h6>Draft</h6>
-   <p>Created on</p>
-   <p>01/31/2020</p>
-   </div>
-   <div class="step">
-   <h6>Pending Approval</h6>
-   <p>Approval sent</p>
-   <p>02/14/2020</p>
-   </div>
-   <div class="step">
-   <h6>Approved</h6>
-   <p>Abandoned on</p>
-   <p>02/20/2020</p>
-   </div>
-   <div class="step">
-   <h6>Execute</h6>
-   </div>
-   <div class="step">
-   <h6>Concluded</h6>
-   </div>
-   <div class="step">
-   <h6>Closed</h6>
-   </div>
-   
+  <div class="container flex">
+    <div class="step">
+      <img src="../assets/check.svg" class="icon" alt="checkmark" />
+      <p class="gray-text">Draft</p>
+      <p class="gray-text font-size-small">Created on</p>
+      <p class="black-text font-size-small bold-text">01/31/2020</p>
+    </div>
+    <div class="step">
+      <img src="../assets/check.svg" class="icon" alt="checkmark" />
+      <p class="gray-text">Pending Approval</p>
+      <p class="gray-text font-size-small">Approval sent</p>
+      <p class="black-text font-size-small bold-text">02/14/2020</p>
+    </div>
+    <div class="step">
+      <span class="dot"></span>
+      <p class="gray-text">Approved</p>
+      <p class="gray-text font-size-small">Abandoned on</p>
+      <p class="black-text font-size-small bold-text">02/20/2020</p>
+    </div>
+    <div class="step">
+      <span class="dot"></span>
+      <p class="gray-text">Execute</p>
+    </div>
+    <div class="step">
+      <span class="dot"></span>
+      <p class="gray-text">Concluded</p>
+    </div>
+    <div class="step">
+      <span class="dot"></span>
+      <p class="gray-text">Closed</p>
+    </div>
   </div>
 </template>
 
@@ -49,11 +54,21 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .container {
-  display: flex;
-  .step{
-   background-color: red;
-   flex-grow: 1;
-   height: 30px;
+ height: 130px;
+  .step {
+    flex-grow: 1;
+    height: 30px;
+    .icon {
+      height: 25px;
+      width: 25px;
+    }
+    .dot {
+      height: 25px;
+      width: 25px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
   }
 }
 </style>

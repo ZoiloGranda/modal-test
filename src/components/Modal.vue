@@ -8,12 +8,13 @@
         <span class="close fg-1">&times;</span>
       </div>
       <div class="flex">
-      <p>2019 Fall Oncology Advisory Board</p>
+      <p class="font-size-12">2019 Fall Oncology Advisory Board</p>
      </div>
-      <Steps />
-      <p>{{ isopen }}</p>
-      <SecondaryButton buttonText="Reinstate" />
-      <MainButton buttonText="Draft Revisions" />
+      <Steps/>
+      <div class="flex row-reverse">
+       <MainButton buttonText="Draft Revisions" />
+       <SecondaryButton buttonText="Reinstate" class="mr-min" />
+      </div>
     </div>
   </section>
 </template>
@@ -91,37 +92,11 @@ export default {
   border-radius: 4px;
 }
 
-.center-text{
- margin: auto;
-}
-
-.white-text{
- color: white;
-}
-.font-size-14{
- font-size: 14px;
-}
-
 .content-height{
  height: 45px;
 }
-.flex {
-  display: flex;
-}
 
-.fg-1 {
-  flex-grow: 1;
-}
-
-.fg-2 {
-  flex-grow: 2;
-}
-
-.fg-3 {
-  flex-grow: 3;
-}
-
-.fg-4 {
-  flex-grow: 4;
+.row-reverse{
+ flex-direction: row-reverse
 }
 </style>
