@@ -1,22 +1,31 @@
 <template>
- <!-- The Modal -->
-<div id="myModal" class="modal">
-
- <!-- Modal content -->
- <div class="modal-content">
-   <span class="close">&times;</span>
-   <p>Some text in the Modal..</p>
-   <p>{{isopen}}</p>
- </div>
-
-</div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1>Engagement Process</h1>
+      <span>Abandoned</span>
+      <Steps />
+      <p>2019 Fall Oncology Advisory Board</p>
+      <p>{{ isopen }}</p>
+      <SecondaryButton buttonText="Reinstate" />
+      <MainButton buttonText="Draft Revisions" />
+    </div>
+  </div>
 </template>
-
 <script>
+import Steps from "./Steps.vue";
+import MainButton from "./MainButton.vue";
+import SecondaryButton from "./SecondaryButton.vue";
+
 export default {
   name: "Modal",
-  props:{
-   isopen:Boolean
+  components: {
+    Steps,
+    MainButton,
+    SecondaryButton
+  },
+  props: {
+    isopen: Boolean
   },
   methods: {
     close() {
@@ -27,7 +36,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
 /* The Modal (background) */
 .modal {
   position: fixed; /* Stay in place */
@@ -37,8 +45,8 @@ export default {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
