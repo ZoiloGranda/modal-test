@@ -4,32 +4,27 @@
       <div class="step-1">
         <img src="../assets/check.svg" class="icon" alt="checkmark" />
       </div>
-      <div class="step-5">
-        <div class="line green"></div>
+      <div class="step-5 line green">
       </div>
       <div class="step-1">
         <img src="../assets/check.svg" class="icon" alt="checkmark" />
       </div>
-      <div class="step-5">
-        <div class="line"></div>
+      <div class="step-5 line">
       </div>
       <div class="step-1">
         <span class="dot"><p class="white-text bold-text">3</p></span>
       </div>
-      <div class="step-5">
-        <div class="line"></div>
+      <div class="step-5 line">
       </div>
       <div class="step-1">
         <span class="dot"><p class="white-text bold-text">4</p></span>
       </div>
-      <div class="step-5">
-        <div class="line"></div>
+      <div class="step-5 line">
       </div>
       <div class="step-1">
         <span class="dot"><p class="white-text bold-text">5</p></span>
       </div>
-      <div class="step-5">
-        <div class="line"></div>
+      <div class="step-5 line">
       </div>
       <div class="step-1">
         <span class="dot"><p class="white-text bold-text">6</p></span>
@@ -41,22 +36,27 @@
         <p class="gray-text font-size-small">Created on</p>
         <p class="black-text font-size-small bold-text">01/31/2020</p>
       </div>
+      <div class="description-separator"></div>
       <div class="description-step">
         <p class="gray-text">Pending Approval</p>
         <p class="gray-text font-size-small">Approval sent</p>
         <p class="black-text font-size-small bold-text">02/14/2020</p>
       </div>
+      <div class="description-separator"></div>
       <div class="description-step">
         <p class="gray-text">Approved</p>
         <p class="gray-text font-size-small">Abandoned on</p>
         <p class="black-text font-size-small bold-text">02/20/2020</p>
       </div>
+      <div class="description-separator"></div>
       <div class="description-step">
         <p class="gray-text">Execute</p>
       </div>
+      <div class="description-separator"></div>
       <div class="description-step">
         <p class="gray-text">Concluded</p>
       </div>
+      <div class="description-separator"></div>
       <div class="description-step">
         <p class="gray-text">Closed</p>
       </div>
@@ -86,13 +86,12 @@ export default {
 <style scoped lang="scss">
 .steps-container{
  width: 90%;
- margin: 0 auto;
+ margin: 3rem auto auto auto;
 }
 .flow-container {
-  height: 30px;
+  align-items: center;
   .step-1 {
     flex-grow: 1;
-    height: 30px;
     .icon {
       height: 20px;
       width: 20px;
@@ -111,12 +110,11 @@ export default {
   }
   .step-5{
    flex-grow: 5;
-   .line {
+   &.line {
     width: 100%;
     height: 0;
     border: 1px solid #c4c4c4;
     margin: 3px;
-    display: inline-block;
     &.green{
      border: 1px solid #00c221;
     }
@@ -125,7 +123,10 @@ export default {
 }
 .description-container {
   .description-step {
-    width: 10vw;
+    flex-grow: 1;
+  }
+  .description-separator {
+    // flex-grow: 2;
   }
 }
 </style>

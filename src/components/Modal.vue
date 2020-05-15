@@ -2,10 +2,10 @@
   <section class="modal">
     <div class="modal-content">
       <div class="flex content-height">
-        <p class="fg-3 title">Engagement Process</p>
-        <p class="fg-3 bg-red font-size-small center-text white-text">Abandoned</p>
-        <span class="fg-14"></span>
-        <img class="close fg-1 icon" src="../assets/close.svg" alt="close" />
+        <p class="fg-1 title">Engagement Process</p>
+        <p class="fg-1 bg-red font-size-small center-text white-text">Abandoned</p>
+        <span class="fill-flex"></span>
+        <img class="close fg-3 icon" src="../assets/close.svg" alt="close" />
       </div>
       <div class="flex">
       <p class="font-size-12 subtitle fg-1">2019 Fall Oncology Advisory Board</p>
@@ -62,7 +62,6 @@ export default {
   }
   .close {
    color: #aaa;
-   float: right;
    height: 0.8rem;
    width: 0.8rem;
   }
@@ -77,7 +76,6 @@ export default {
    color: black;
    font-size: 20px;
    font-weight: bold;
-   width: 130px;
    margin: 0;
    text-align: left;
    padding-left: 0.5rem;
@@ -86,14 +84,17 @@ export default {
    text-align: left;
    padding-left: 0.5rem;
    font-size: 0.9rem;
+   margin: 0.6rem auto auto auto;
   }
   .bg-red {
    background-color: #e20000;
-   width:0.1rem;
    border-radius: 4px;
    height: 1.3rem;
    line-height: 1.3rem;
-   margin: 0
+   margin: 0;
+  }
+  .fill-flex{
+   flex-grow: 50;
   }
   .content-height{
    align-items: flex-end;
