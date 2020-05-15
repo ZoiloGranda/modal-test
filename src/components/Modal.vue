@@ -1,16 +1,21 @@
 <template>
-  <div id="myModal" class="modal">
+  <section class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <h1>Engagement Process</h1>
-      <span>Abandoned</span>
-      <Steps />
+      <div class="flex content-height">
+        <p class="fg-1 title">Engagement Process</p>
+        <p class="fg-1 bg-red font-size-14 center-text white-text">Abandoned</p>
+        <span class="fg-4"></span>
+        <span class="close fg-1">&times;</span>
+      </div>
+      <div class="flex">
       <p>2019 Fall Oncology Advisory Board</p>
+     </div>
+      <Steps />
       <p>{{ isopen }}</p>
       <SecondaryButton buttonText="Reinstate" />
       <MainButton buttonText="Draft Revisions" />
     </div>
-  </div>
+  </section>
 </template>
 <script>
 import Steps from "./Steps.vue";
@@ -53,7 +58,7 @@ export default {
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
+  padding: 15px 20px 20px 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
 }
@@ -71,5 +76,52 @@ export default {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.title {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  width: 130px;
+}
+
+.bg-red {
+  background-color: #e20000;
+  width:16px;
+  border-radius: 4px;
+}
+
+.center-text{
+ margin: auto;
+}
+
+.white-text{
+ color: white;
+}
+.font-size-14{
+ font-size: 14px;
+}
+
+.content-height{
+ height: 45px;
+}
+.flex {
+  display: flex;
+}
+
+.fg-1 {
+  flex-grow: 1;
+}
+
+.fg-2 {
+  flex-grow: 2;
+}
+
+.fg-3 {
+  flex-grow: 3;
+}
+
+.fg-4 {
+  flex-grow: 4;
 }
 </style>

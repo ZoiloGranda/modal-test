@@ -18,7 +18,7 @@ export default {
   },
   data() {
     return {
-      modalOpen: false
+      modalOpen: true
     };
   },
   methods: {
