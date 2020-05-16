@@ -17,7 +17,8 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  // font-family: 'Mukta', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -57,11 +58,11 @@ export default {
 }
 
 .black-text{
- color:#111111;
+ color:#202020;
 }
 
 .gray-text{
- color:#595959;
+ color:#777777;
 }
 .white-text{
  color: white;

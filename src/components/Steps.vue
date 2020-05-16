@@ -32,28 +32,28 @@
     </div>
     <div class="description-container flex">
       <div class="description-step">
-        <p class="gray-text">Draft</p>
-        <p class="gray-text font-size-small">Created on</p>
-        <p class="black-text font-size-small bold-text">01/31/2020</p>
+        <p class="gray-text step-title">Draft</p>
+        <p class="gray-text font-size-small step-status">Created on</p>
+        <p class="black-text font-size-small bold-text step-date">01/31/2020</p>
       </div>
       <div class="description-step">
-        <p class="gray-text">Pending Approval</p>
-        <p class="gray-text font-size-small">Approval sent</p>
-        <p class="black-text font-size-small bold-text">02/14/2020</p>
+        <p class="gray-text step-title">Pending Approval</p>
+        <p class="gray-text font-size-small step-status">Approval sent</p>
+        <p class="black-text font-size-small bold-text step-date">02/14/2020</p>
       </div>
       <div class="description-step">
-        <p class="gray-text">Approved</p>
-        <p class="gray-text font-size-small">Abandoned on</p>
-        <p class="black-text font-size-small bold-text">02/20/2020</p>
+        <p class="gray-text step-title">Approved</p>
+        <p class="gray-text font-size-small step-status">Abandoned on</p>
+        <p class="black-text font-size-small bold-text step-date">02/20/2020</p>
       </div>
       <div class="description-step">
-        <p class="gray-text">Execute</p>
+        <p class="gray-text step-title">Execute</p>
       </div>
       <div class="description-step">
-        <p class="gray-text">Concluded</p>
+        <p class="gray-text step-title">Concluded</p>
       </div>
       <div class="description-step">
-        <p class="gray-text">Closed</p>
+        <p class="gray-text step-title">Closed</p>
       </div>
     </div>
   </div>
@@ -119,9 +119,19 @@ export default {
 }
 .description-container {
  width: 99%;
- margin: 0 auto;
+ margin: 0 auto 2rem auto;
   .description-step {
-   flex: 1 1 0px
+   flex: 1 1 0px;
+   p.step-title{
+    margin: 0.7rem auto 0.9rem auto;
+    font-weight: 500;
+   }
+   p.step-status{
+    margin-bottom: 0rem;
+   }
+   p.step-date{
+    margin-top: 0.4rem;
+   }
   }
 }
 </style>

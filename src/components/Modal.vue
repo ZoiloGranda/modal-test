@@ -2,7 +2,7 @@
   <section class="modal">
     <div class="modal-content border-style">
       <div class="flex content-height">
-        <p class="fg-1 title">Engagement Process</p>
+        <p class="fg-1 title black-text">Engagement Process</p>
         <p class="fg-1 bg-red font-size-small center-text white-text">
           Abandoned
         </p>
@@ -82,7 +82,6 @@ export default {
   }
 
   .title {
-    color: black;
     font-size: 20px;
     font-weight: bold;
     margin: 0;
