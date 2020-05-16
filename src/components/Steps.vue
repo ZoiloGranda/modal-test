@@ -36,27 +36,22 @@
         <p class="gray-text font-size-small">Created on</p>
         <p class="black-text font-size-small bold-text">01/31/2020</p>
       </div>
-      <div class="description-separator"></div>
       <div class="description-step">
         <p class="gray-text">Pending Approval</p>
         <p class="gray-text font-size-small">Approval sent</p>
         <p class="black-text font-size-small bold-text">02/14/2020</p>
       </div>
-      <div class="description-separator"></div>
       <div class="description-step">
         <p class="gray-text">Approved</p>
         <p class="gray-text font-size-small">Abandoned on</p>
         <p class="black-text font-size-small bold-text">02/20/2020</p>
       </div>
-      <div class="description-separator"></div>
       <div class="description-step">
         <p class="gray-text">Execute</p>
       </div>
-      <div class="description-separator"></div>
       <div class="description-step">
         <p class="gray-text">Concluded</p>
       </div>
-      <div class="description-separator"></div>
       <div class="description-step">
         <p class="gray-text">Closed</p>
       </div>
@@ -85,13 +80,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .steps-container{
- width: 90%;
+ width: 100%;
  margin: 3rem auto auto auto;
 }
 .flow-container {
   align-items: center;
+  width: 85%;
+  margin: 3rem auto 0 auto;
   .step-1 {
-    flex-grow: 1;
+    flex: 1 1 0px;
     .icon {
       height: 20px;
       width: 20px;
@@ -109,9 +106,8 @@ export default {
     }
   }
   .step-5{
-   flex-grow: 5;
+   flex: 5 1 0px;
    &.line {
-    width: 100%;
     height: 0;
     border: 1px solid #c4c4c4;
     margin: 3px;
@@ -122,11 +118,10 @@ export default {
   }
 }
 .description-container {
+ width: 99%;
+ margin: 0 auto;
   .description-step {
-    flex-grow: 1;
-  }
-  .description-separator {
-    // flex-grow: 2;
+   flex: 1 1 0px
   }
 }
 </style>

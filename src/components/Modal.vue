@@ -1,19 +1,23 @@
 <template>
   <section class="modal">
-    <div class="modal-content">
+    <div class="modal-content border-style">
       <div class="flex content-height">
         <p class="fg-1 title">Engagement Process</p>
-        <p class="fg-1 bg-red font-size-small center-text white-text">Abandoned</p>
+        <p class="fg-1 bg-red font-size-small center-text white-text">
+          Abandoned
+        </p>
         <span class="fill-flex"></span>
         <img class="close fg-3 icon" src="../assets/close.svg" alt="close" />
       </div>
       <div class="flex">
-      <p class="font-size-12 subtitle fg-1">2019 Fall Oncology Advisory Board</p>
-     </div>
-      <Steps/>
+        <p class="font-size-12 subtitle fg-1">
+          2019 Fall Oncology Advisory Board
+        </p>
+      </div>
+      <Steps />
       <div class="flex row-reverse">
-       <MainButton buttonText="Draft Revisions" />
-       <SecondaryButton buttonText="Reinstate" class="mr-min" />
+        <MainButton buttonText="Draft Revisions" />
+        <SecondaryButton buttonText="Reinstate" class="mr-min" />
       </div>
     </div>
   </section>
@@ -54,59 +58,59 @@ export default {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   .modal-content {
-   background-color: #fefefe;
-   margin: 15% auto;
-   padding: 15px 20px 20px 20px;
-   border: 1px solid #888;
-   width: 80%;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px 20px 25px 20px;
+    width: 80%;
+    &.border-style {
+      background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(to left, #0075ae, #240055) border-box;
+      border-top: 4px solid transparent;
+      border-radius: 3px;
+    }
   }
   .close {
-   color: #aaa;
-   height: 0.8rem;
-   width: 0.8rem;
+    color: #aaa;
+    height: 0.8rem;
+    width: 0.8rem;
   }
   .close:hover,
   .close:focus {
-   color: black;
-   text-decoration: none;
-   cursor: pointer;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
   }
-  
+
   .title {
-   color: black;
-   font-size: 20px;
-   font-weight: bold;
-   margin: 0;
-   text-align: left;
-   padding-left: 0.5rem;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+    padding-left: 0.5rem;
   }
-  .subtitle{
-   text-align: left;
-   padding-left: 0.5rem;
-   font-size: 0.9rem;
-   margin: 0.6rem auto auto auto;
+  .subtitle {
+    text-align: left;
+    padding-left: 0.5rem;
+    font-size: 0.9rem;
+    margin: 0.6rem auto auto auto;
   }
   .bg-red {
-   background-color: #e20000;
-   border-radius: 4px;
-   height: 1.3rem;
-   line-height: 1.3rem;
-   margin: 0;
+    background-color: #e20000;
+    border-radius: 4px;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    margin: 0;
   }
-  .fill-flex{
-   flex-grow: 50;
+  .fill-flex {
+    flex-grow: 50;
   }
-  .content-height{
-   align-items: flex-end;
+  .content-height {
+    align-items: flex-end;
   }
-  
-  .row-reverse{
-   flex-direction: row-reverse
+
+  .row-reverse {
+    flex-direction: row-reverse;
   }
 }
-
-
-
-
-
 </style>

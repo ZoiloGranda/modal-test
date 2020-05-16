@@ -34,7 +34,7 @@ button {
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
-  padding: 8px 16px;
+  padding: 10px 16px;
   text-decoration: none;
 }
 button:hover {
