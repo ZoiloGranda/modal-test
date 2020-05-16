@@ -102,4 +102,21 @@ export default {
 .mr-4{
  margin-right: 4em
 }
+
+.tooltiptext {
+  visibility: hidden;
+  width: 4.5rem;
+  background-color: #bbb;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover {
+  .tooltiptext{
+   visibility:visible;
+  }
+}
 </style>

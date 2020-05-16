@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <MainButton class="open-modal" @click.native="openModal" buttonText="Open Modal"/>
-    <Modal v-if="modalOpen" :isopen="modalOpen" :data="data"></Modal>
+    <Modal v-if="modalOpen" :isopen="modalOpen" :data="data" @close="modalOpen = $event"></Modal>
   </div>
 </template>
 
@@ -23,8 +23,10 @@ export default {
   },
   methods: {
     openModal() {
-     console.log('jai');
       this.modalOpen = !this.modalOpen;
+    },
+    closeModal() {
+      this.modalOpen = false;
     }
   },
   created: function () {
@@ -36,7 +38,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
 </style>

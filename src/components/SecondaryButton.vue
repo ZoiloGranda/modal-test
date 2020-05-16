@@ -38,8 +38,9 @@ button {
   text-decoration: none;
 }
 button:hover {
-  background: linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
-  background-color: #ffffff;
+ background: linear-gradient(to bottom, #0969FC 5%, #0768fc 100%);
+ background-color: #0769fd;
+ color: #fff;
 }
 button:active {
   position: relative;
