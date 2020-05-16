@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
-    <!-- Trigger/Open The Modal -->
     <MainButton class="open-modal" @click.native="openModal" buttonText="Open Modal"/>
-    <Modal v-if="modalOpen" :isopen="modalOpen"></Modal>
+    <Modal v-if="modalOpen" :isopen="modalOpen" :data="data"></Modal>
   </div>
 </template>
 
@@ -18,7 +17,8 @@ export default {
   },
   data() {
     return {
-      modalOpen: true
+      modalOpen: false,
+      data: {}
     };
   },
   methods: {
@@ -26,6 +26,12 @@ export default {
      console.log('jai');
       this.modalOpen = !this.modalOpen;
     }
+  },
+  created: function () {
+    fetch('data.json').then(res=>res.json()).then(data=>{
+     console.log(data);
+     this.data = data;
+    })
   }
 };
 </script>

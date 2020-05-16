@@ -2,19 +2,19 @@
   <section class="modal">
     <div class="modal-content border-style">
       <div class="flex content-height">
-        <p class="fg-1 title black-text">Engagement Process</p>
+        <p class="fg-1 title black-text">{{data.process}}</p>
         <p class="fg-1 bg-red font-size-small center-text white-text">
-          Abandoned
+          {{data.status}}
         </p>
         <span class="fill-flex"></span>
         <img class="close fg-3 icon" src="../assets/close.svg" alt="close" />
       </div>
       <div class="flex">
         <p class="font-size-12 subtitle fg-1">
-          2019 Fall Oncology Advisory Board
+          {{data.board}}
         </p>
       </div>
-      <Steps />
+      <Steps :steps="data.data"/>
       <div class="flex row-reverse">
         <MainButton buttonText="Draft Revisions" />
         <SecondaryButton buttonText="Reinstate" class="mr-min" />
@@ -35,7 +35,8 @@ export default {
     SecondaryButton
   },
   props: {
-    isopen: Boolean
+    isopen: Boolean,
+    data: Object
   },
   methods: {
     close() {

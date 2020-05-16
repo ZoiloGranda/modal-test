@@ -1,6 +1,8 @@
 <template>
   <div class="steps-container">
     <div class="flow-container flex">
+     <!-- <p>{{steps[0].description}}</p> -->
+      <!-- v-for="item in steps" -->
       <div class="step-1">
         <img src="../assets/check.svg" class="icon" alt="checkmark" />
       </div>
@@ -64,15 +66,19 @@ import Steps from "./Steps.vue";
 
 export default {
   name: "Steps",
-  data() {
-    return {
-      modalOpen: false
-    };
+  props: {
+    steps: Array
   },
   methods: {
     openModal() {
       this.modalOpen = !this.modalOpen;
     }
+  },
+  created: function () {
+    console.log(this.steps);
+  },
+  mounted: function () {
+    console.log(this.steps);
   }
 };
 </script>

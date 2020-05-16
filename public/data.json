@@ -1,0 +1,36 @@
+{
+ "process":"Engagement Process",
+ "status": "Abandoned",
+ "board":"2019 Fall Oncology Board",
+ "data": [{
+  "done": true,
+  "name": "Draft",
+  "description": "Created on",
+  "date": "01/31/2020"
+ }, {
+  "done": true,
+  "name": "Pending Approval",
+  "description": "Approval sent",
+  "date": "02/14/2020"
+ }, {
+  "done": false,
+  "name": "Approved",
+  "description": "Abandoned on",
+  "date": "02/20/2020"
+ },{
+  "done": false,
+  "name": "Execute",
+  "description": null,
+  "date": null
+ },{
+  "done": false,
+  "name": "Concluded",
+  "description": null,
+  "date": null
+ },{
+  "done": false,
+  "name": "Closed",
+  "description": null,
+  "date": null
+ }]
+}
