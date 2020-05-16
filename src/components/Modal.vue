@@ -101,6 +101,7 @@ export default {
     height: 1.3rem;
     line-height: 1.3rem;
     margin: 0;
+    font-weight: 500;
   }
   .fill-flex {
     flex-grow: 50;

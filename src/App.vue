@@ -29,6 +29,10 @@ export default {
 }
 
 .fg-1 {
+  flex-grow: 0;
+}
+
+.fg-1 {
   flex-grow: 1;
 }
 
