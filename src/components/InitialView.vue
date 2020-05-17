@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <MainButton class="open-modal" @click.native="openModal" buttonText="Open Modal"/>
-    <Modal v-if="modalOpen" :isopen="modalOpen" :data="data" @close="modalOpen = $event"></Modal>
+    <Modal :isopen="modalOpen" :data="data" @close="modalOpen = $event"></Modal>
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     openModal() {
-      this.modalOpen = !this.modalOpen;
+      this.modalOpen = true;
     },
     closeModal() {
       this.modalOpen = false;

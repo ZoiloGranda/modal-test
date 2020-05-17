@@ -1,5 +1,5 @@
 <template>
- <section class="modal" @click.self="closeModal()">
+ <section class="modal" v-bind:class="[isopen ? 'showModal' : 'hideModal']" @click.self="closeModal()">
   <div class="modal-content border-style">
    <div class="flex content-height">
     <p class="fg-1 title black-text">{{data.process}}</p>
@@ -50,6 +50,7 @@ export default {
 
 <style lang="scss" scoped>
 .modal {
+ opacity: 0;
  position: fixed;
  z-index: 1;
  left: 0;
@@ -59,6 +60,40 @@ export default {
  overflow: auto;
  background-color: rgb(0, 0, 0);
  background-color: rgba(0, 0, 0, 0.4);
+ &.hideModal{
+  z-index:-1;
+  opacity:0;
+  animation: hide .25s;
+  transform: scale(0);
+ }
+ @keyframes hide {
+  from{
+   z-index:2;
+   transform: scale(1);
+   opacity:1;
+  } to{
+   z-index:-1;
+   transform: scale(0);
+   opacity: 0;
+  }
+ }
+ &.showModal{
+  opacity:1;
+  z-index:2;
+  animation: show .2s;
+  transform: scale(1);
+ }
+ @keyframes show {
+  from{
+   transform: scale(0);
+   opacity:0;
+   z-index:-1;
+  } to{
+   transform: scale(1);
+   opacity: 1;
+   z-index:2;
+  }
+ }
  .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
