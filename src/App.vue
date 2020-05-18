@@ -29,35 +29,7 @@ export default {
 }
 
 .fg-1 {
-  flex-grow: 0;
-}
-
-.fg-1 {
   flex-grow: 1;
-}
-
-.fg-2 {
-  flex-grow: 2;
-}
-
-.fg-3 {
-  flex-grow: 3;
-}
-
-.fg-4 {
-  flex-grow: 4;
-}
-
-.fg-14 {
-  flex-grow: 14;
-}
-
-.center-text{
- margin: auto;
-}
-
-.bold-text{
- font-weight: 600;
 }
 
 .black-text{
@@ -73,34 +45,6 @@ export default {
 
 .font-size-small{
  font-size: 0.8rem
-}
-
-.font-size-1{
- font-size: 1rem
-}
-
-.font-size-14{
- font-size: 14px;
-}
-
-.font-size-12{
- font-size: 12px;
-}
-.mr-min{
- margin-right: 0.5em
-}
-
-.mr-1{
- margin-right: 1em
-}
-.mr-2{
- margin-right: 2em
-}
-.mr-3{
- margin-right: 3em
-}
-.mr-4{
- margin-right: 4em
 }
 
 .tooltiptext {

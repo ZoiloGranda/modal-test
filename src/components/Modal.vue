@@ -3,23 +3,23 @@
   <div class="modal-content border-style">
    <div class="flex content-height">
     <p class="fg-1 title black-text">{{data.process}}</p>
-    <p class="fg-1 bg-red font-size-small center-text white-text">
+    <p class="fg-1 bg-red font-size-small white-text">
      {{data.status}}
     </p>
     <span class="fill-flex">     
     </span>
-    <img class="close fg-3 icon tooltip" src="../assets/close.svg" alt="close" @click='closeModal()' />
+    <img class="close icon tooltip" src="../assets/close.svg" alt="close" @click='closeModal()' />
     
    </div>
    <div class="flex">
-    <p class="font-size-12 subtitle fg-1">
+    <p class="subtitle fg-1">
      {{data.board}}
     </p>
    </div>
    <Steps :steps="data.data"/>
    <div class="flex row-reverse">
     <MainButton buttonText="Draft Revisions" />
-    <SecondaryButton buttonText="Reinstate" class="mr-min" />
+    <SecondaryButton buttonText="Reinstate" />
    </div>
   </div>
  </section>
@@ -75,6 +75,8 @@ export default {
   color: #aaa;
   height: 0.8rem;
   width: 0.8rem;
+  flex-grow: 3;
+  align-self: center;
  }
  .close:hover,
  .close:focus {
@@ -82,7 +84,6 @@ export default {
   text-decoration: none;
   cursor: pointer;
  }
- 
  .title {
   font-size: 20px;
   font-weight: bold;
@@ -95,6 +96,7 @@ export default {
   padding-left: 0.5rem;
   font-size: 0.9rem;
   margin: 0.6rem auto auto auto;
+  font-size: 12px;
  }
  .bg-red {
   background-color: #e20000;

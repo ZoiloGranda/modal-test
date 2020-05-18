@@ -5,7 +5,7 @@
    v-for="(item, index) in steps" v-bind:class="[index+1===steps.length ? 'fg-0' : 'fg-1']">
    <div class="step-1 tooltip">
     <img v-if="item.done" src="../assets/check.svg" class="icon" alt="checkmark" />
-    <span v-else class="dot"><p class="white-text bold-text">{{index+1}}</p></span>
+    <span v-else class="dot"><p class="white-text">{{index+1}}</p></span>
     <span class="tooltiptext">{{item.done?'Nice':'Not Nice'}}</span>
    </div>
    <div v-if="index!==steps.length-1" class="step-5 line" 
@@ -18,7 +18,7 @@
  <div class="description-step" v-for="(item, index) in steps">
   <p class="gray-text step-title">{{item.name}}</p>
   <p class="gray-text font-size-small step-status">{{item.description}}</p>
-  <p class="black-text font-size-small bold-text step-date">{{item.date}}</p>
+  <p class="black-text font-size-small step-date">{{item.date}}</p>
  </div>
 </div>
 </div>
@@ -66,6 +66,7 @@ export default {
     p{
      margin: 0;
      line-height: 1.6rem;
+     font-weight: 600;
     }
    }
   }
@@ -103,6 +104,7 @@ export default {
   }
   p.step-date{
    margin-top: 0.4rem;
+   font-weight: 600;
    @media only screen and (max-width: 580px) {
      font-size: 0.6rem;
    }
