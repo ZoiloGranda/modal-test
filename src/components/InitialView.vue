@@ -1,7 +1,7 @@
 <template>
  <div class="hello">
   <MainButton class="open-modal" @click.native="openModal" buttonText="Open Modal"/>
-  <transition name="bounce">
+  <transition name="fade">
    <Modal v-if="modalOpen" :isopen="modalOpen" :data="data" @close="modalOpen = $event"></Modal>
   </transition>
  </div>
@@ -42,21 +42,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.bounce-enter-active {
- animation: bounce-in .5s;
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s linear;
 }
-.bounce-leave-active {
- animation: bounce-in .5s reverse;
-}
-@keyframes bounce-in {
- 0% {
-  transform: scale(0);
- }
- 50% {
-  transform: scale(1.2);
- }
- 100% {
-  transform: scale(1);
- }
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

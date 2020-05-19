@@ -10,8 +10,7 @@
     <span class="tooltiptext">{{item.done?'Nice':'Not Nice'}}</span>
    </div>
    <div class="step-5 line" 
-   v-bind:class="[item.done && index!==1 ? 'green' : '',
-   item.done ? 'colored-line':'']">
+   v-bind:class="[item.done && index!==1 ? 'green' : '']">
   </div>
  </div>
 </div>
@@ -124,21 +123,16 @@ export default {
 @media only screen and (max-width: 400px) {
  .steps-container{
   display: flex;
-  height: 60%;
-  margin: 2.5rem auto;
+  height: 65%;
+  margin: 1.5rem 0 0.5rem 0;
   .flow-container{
    width: 100%;
    flex-direction: column;
    flex-grow: 1;
-   margin: 0 auto 0 10vw;
+   margin: 0 auto 0 10%;
    .step-container{
-    width:100%;
-    &:last-child{
-     flex-grow: 1;
-     .line {
-      display: block;
-    }
-   }
+    flex-direction: column;
+    max-height: 17%;
    .colored-line{
     height: 1px;
     border: 0.5px solid #00c221;
@@ -153,9 +147,9 @@ export default {
    .description-step{
     margin: 0;
     display: flex;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
+    max-height: 17%;
    }
    p.step-status, p.step-date{
     margin: 0 auto;

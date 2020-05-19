@@ -140,7 +140,7 @@ export default {
   height: 100%;
   overflow:hidden;
   .modal-content{
-   height: 75vh;
+   height: 80%;
    margin: 8% auto;
    padding: 20px 20px 10px 20px;
    .close{
