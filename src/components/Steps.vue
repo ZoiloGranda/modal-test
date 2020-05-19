@@ -100,27 +100,18 @@ export default {
   p.step-title{
    margin: 0.7rem auto 0.9rem auto;
    font-weight: 500;
-   @media only screen and (max-width: 580px) {
-    font-size: 0.7rem;
-   }
   }
   p.step-status{
    margin-bottom: 0rem;
-   @media only screen and (max-width: 580px) {
-    font-size: 0.6rem;
-   }
   }
   p.step-date{
    margin-top: 0.4rem;
    font-weight: 600;
-   @media only screen and (max-width: 580px) {
-    font-size: 0.6rem;
-   }
   }
  }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 680px) {
  .steps-container{
   display: flex;
   height: 65%;
@@ -133,17 +124,17 @@ export default {
    .step-container{
     flex-direction: column;
     max-height: 17%;
-   .colored-line{
-    height: 1px;
-    border: 0.5px solid #00c221;
-    background-color: #00c221;
-   }
+    .colored-line{
+     height: 1px;
+     border: 0.5px solid #00c221;
+     background-color: #00c221;
+    }
    }
   }
   .description-container{
    flex-direction: column;
    flex-grow: 1;
-   margin: 0 auto;
+   margin: 0 2rem 0 0;
    .description-step{
     margin: 0;
     display: flex;
@@ -162,6 +153,22 @@ export default {
    }
   }
   
+ }
+}
+@media only screen and (max-width: 340px) {
+ .steps-container{
+  .description-container{
+   .description-step{
+   }
+   p.step-status, p.step-date{
+    margin: 0 auto;
+    font-size: 0.55rem;
+   } 
+   p.step-title{
+    margin: 0 auto;
+    font-size: 0.7rem;
+   }
+  }
  }
 }
 </style>

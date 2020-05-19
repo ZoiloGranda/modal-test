@@ -37,8 +37,13 @@ button {
  font-weight: bold;
  padding: 10px 16px;
  text-decoration: none;
- @media only screen and (max-width: 400px) {
+ @media only screen and (max-width: 680px) {
   font-size: 12px;
+ }
+ @media only screen and (max-width: 300px) {
+  padding: 0px;
+  font-size: 10px;
+  width: 40%;
  }
 }
 button:hover {
