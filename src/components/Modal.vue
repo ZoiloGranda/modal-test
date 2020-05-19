@@ -94,7 +94,7 @@ export default {
  .title {
   font-size: 1.2rem;
   font-weight: bold;
-  margin: 0px 0.5rem 0px 0px;
+  margin: 0px;
   text-align: left;
   padding-left: 0.5rem;
   flex: 1 1 12rem;
