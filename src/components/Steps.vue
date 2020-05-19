@@ -159,9 +159,12 @@ export default {
    }
    p.step-status, p.step-date{
     margin: 0 auto;
+    font-size: 0.7rem;
+    
    } 
    p.step-title{
     margin: 0 auto;
+    font-size: 0.8rem;
    }
   }
   
