@@ -1,14 +1,16 @@
 <template>
  <section class="modal" @click.self="closeModal()">
   <div class="modal-content border-style">
+   <div class="flex close-container">
+    <img class="close icon" src="../assets/close.svg" alt="close" @click='closeModal()' />
+   </div> 
    <div class="flex content-height">
-    <p class="fg-1 title black-text">{{data.process}}</p>
+    <p class="title black-text">{{data.process}}</p>
     <p class="fg-1 bg-red font-size-small white-text">
      {{data.status}}
     </p>
     <span class="fill-flex">     
     </span>
-    <img class="close icon tooltip" src="../assets/close.svg" alt="close" @click='closeModal()' />
     
    </div>
    <div class="flex">
@@ -61,9 +63,9 @@ export default {
  background-color: rgba(0, 0, 0, 0.4);
  .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 20px 20px 25px 20px;
-  width: 80%;
+  width: 70%;
   &.border-style {
    background: linear-gradient(#fff, #fff) padding-box,
    linear-gradient(to left, #0075ae, #240055) border-box;
@@ -71,25 +73,34 @@ export default {
    border-radius: 3px;
   }
  }
- .close {
-  color: #aaa;
-  height: 0.8rem;
-  width: 0.8rem;
-  flex-grow: 3;
-  align-self: center;
- }
- .close:hover,
- .close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+ .close-container{
+   flex-direction: row-reverse;
+  .close {
+   color: #aaa;
+   height: 0.8rem;
+   width: 0.8rem;
+   align-self: center;
+   @media only screen and (max-width: 440px) {
+    align-self: end
+   }
+  }
+  .close:hover,
+  .close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+  }
  }
  .title {
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin: 0;
+  margin: 0px 0.5rem 0px 0px;
   text-align: left;
   padding-left: 0.5rem;
+  flex: 1 1 12rem;
+  @media only screen and (max-width: 440px) {
+   flex: 1 1 10rem;
+  }
  }
  .subtitle {
   text-align: left;
@@ -105,6 +116,11 @@ export default {
   line-height: 1.3rem;
   margin: 0;
   font-weight: 500;
+  padding: 0 5px;
+  @media only screen and (max-width: 440px) {
+   justify-content: center;
+   align-self: end;
+  }
  }
  .fill-flex {
   flex-grow: 50;
@@ -129,6 +145,17 @@ export default {
    padding: 20px 20px 10px 20px;
    .close{
     align-self: baseline;
+   }
+   .content-height{
+     flex-direction: column;
+     align-items: flex-start;
+     margin-left: 0.5rem;
+     .title{
+      flex: 1 1 0;
+      padding-left: 0px;
+     }
+     .bg-red{
+     }
    }
   }
  }
