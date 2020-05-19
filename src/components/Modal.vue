@@ -116,4 +116,9 @@ export default {
   flex-direction: row-reverse;
  }
 }
+@media only screen and (max-width: 400px) {
+ .modal-content{
+  height: 80%;
+ }
+}
 </style>
