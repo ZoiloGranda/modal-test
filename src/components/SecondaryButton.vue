@@ -37,6 +37,9 @@ button {
  font-weight: bold;
  padding: 10px 16px;
  text-decoration: none;
+ @media only screen and (max-width: 400px) {
+  font-size: 12px;
+ }
 }
 button:hover {
  background: linear-gradient(to bottom, #0969FC 5%, #0768fc 100%);

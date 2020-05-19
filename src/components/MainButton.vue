@@ -38,15 +38,18 @@ button {
  font-weight: bold;
  padding: 10px 16px;
  text-decoration: none;
+ @media only screen and (max-width: 400px) {
+  font-size: 12px;
+ }
 }
-button:hover {
- background: linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
- background-color: #ffffff;
- color: #0969FC;
- border: 1px solid #e0e0e0;
-}
-button:active {
- position: relative;
- top: 1px;
-}
-</style>
+ button:hover {
+  background: linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+  background-color: #ffffff;
+  color: #0969FC;
+  border: 1px solid #e0e0e0;
+ }
+ button:active {
+  position: relative;
+  top: 1px;
+ }
+ </style>

@@ -114,8 +114,8 @@ export default {
  }
  .row-reverse {
   flex-direction: row-reverse;
-   @media only screen and (max-width: 400px) {
-    justify-content: center;
+  @media only screen and (max-width: 400px) {
+   justify-content: center;
   }
  }
 }
@@ -123,11 +123,14 @@ export default {
  .modal{
   height: 100%;
   overflow:hidden;
- .modal-content{
-  height: 75vh;
-  margin: 8% auto;
-  padding: 20px 20px 0px 20px;
+  .modal-content{
+   height: 75vh;
+   margin: 8% auto;
+   padding: 20px 20px 10px 20px;
+   .close{
+    align-self: baseline;
+   }
+  }
  }
-}
 }
 </style>
